@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+
 .case-events {
     display: flex;
+    flex-direction: column;
+    .events {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        .loc-date-container {
+            display: flex;
+            flex-direction: column;
+            .loc-date {
+                display: flex;
+            }
+        }
+        .carte {
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            height: 350px;
+            .lien-page-event {
+                text-decoration: none;
+            }
+            .description {
+                margin: 20px;
+                display: -webkit-box;
+                overflow-y: hidden;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                font-size: 25px;
+                color: white;
+            }
+            .img-titre-event {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 20px;
+                .eventimg {
+                    width: 90px;
+                    height: 135px;
+                }
+            }
+        }
+    }
 }

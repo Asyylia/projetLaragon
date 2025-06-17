@@ -25,5 +25,22 @@ class Category
         return $this->name;
     }
 
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
+    private ?string $color = null;
 
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(?string $color): self
+    {
+        $this->color = $color;
+        return $this;
+    }
 }
+
+
+
+
+

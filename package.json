@@ -1,0 +1,9 @@
+
+{"scripts": {
+  "sass:watch": "sass --watch assets/styles/app.scss:public/assets/app.css"
+},
+  "dependencies": {
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5"
+  }
+}

@@ -5,13 +5,42 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset ('assets/app.css')}}">
         {% endblock %}
 
-        {% block javascripts %}
+        {# {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+        {% endblock %} #}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <header>
+            <div id="idheader"><a href="{{ path('app_home_page') }}"><img src="{{ asset('images/Logo.png') }}" class="logo"  style="cursor: pointer;"></a>
+            <div class="divnav">
+                <div class="nav"><a class="navbar-titre" href="{{ path('register') }}">Inscription</a><a class="navbar-titre"
+                        href="{{ path('login') }}">Connexion</a><img src="{{ asset('images/loupe-search-svgrepo-com-ih738VQ.png') }}"
+                        class="emoticone-header"><img src="{{ asset('images/shopping-basket-supermarket-svgrepo-com.png') }}"
+                        class="emoticone-header"></div><a class="annonce" href="#">Déposer votre annonce</a>
+            </div>
+        </div>
+        <!-- <img src="./images/Logo.png" width="400px" height="184px" alt="logo Alt'Agenda, noir"> -->
+    </header>
+    {% block body %}{% endblock %}
+    <footer id="footer">
+        <!-- <div id="footer"></div> -->
+        <div class="menubas">
+            <p class="apropos">À propos</p><a class="contact"
+                href="mailto:mezza@gmail.com?subject=Prise de contact&amp;body=J'aimerais faire votre connaissance!">Nous
+                contacter</a>
+            <p class="mentions">Informations légales</p>
+        </div>
+        <div class="sociaux"><img src="{{ asset('images/facebook-svgrepo-com 2.png') }}" class="logosociaux"><img src="{{ asset('images/instagram-svgrepo-com 1.png') }}" class="logosociaux">
+        <img src="{{ asset('images/twitter-svgrepo-com (1) 1.png') }}" class="logosociaux"></div>
+    </footer>
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./cookie.js"></script> #}
+    <!-- <script src="./main.js"></script> -->
+
     </body>
 </html>

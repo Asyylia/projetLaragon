@@ -39,6 +39,7 @@
 
         .divcat {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             margin-top: 30px;
@@ -150,7 +151,7 @@
 
         .divcat {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             margin-top: 30px;
             gap: 20px;
@@ -225,7 +226,7 @@
             border: 3px solid #f4a159;
             border-radius: 27px;
             width: 90%;
-            height: 200px;
+            height: 250px;
             }
         }
             h1 {
@@ -234,16 +235,16 @@
             }
             .dropdown {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 20px;
+                gap: 5px;
                 .btncatdrop {
                     background-color: #f7dfae;
                     border-radius: 19px;
                     border: 3px solid #cab673;
-                    width: 20%;
-                    height: 1.5rem;
+                    width: 80%;
+                    height: 1rem;
                     gap: 10px;
                     font-size: 20px;
                     .licat {
@@ -262,7 +263,7 @@
                     padding-left: 40px;
                     padding-right: 40px;
                     width: 8rem;
-                    height: 1.5rem;
+                    height: 1rem;
                 }
             }
         }

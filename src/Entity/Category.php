@@ -14,7 +14,11 @@ class Category
     private ?int $id = null;
     #[ORM\Column(length: 255)]
     private ?string $name = null;
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
+    private ?string $color = null;
 
+
+    //créer la fonction qui retourne l'id
     public function getId(): ?int
     {
         return $this->id;
@@ -25,8 +29,14 @@ class Category
         return $this->name;
     }
 
-    #[ORM\Column(type: 'string', length: 50, nullable: true)]
-    private ?string $color = null;
+    // créer la fonction qui paramètre le nom, en tant que variable $name
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+
 
     public function getColor(): ?string
     {

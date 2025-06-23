@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\EvenementsRepository;
-use App\Repository\CategoryRepository;
+use App\Entity\Category;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -21,10 +21,8 @@ class Evenements
     #[ORM\Column(length: 255)]
     private ?string $location = null;
 
-    // #[ORM\Column(length: 255)]
-    // #[ORM\ManyToOne(targetEntity: CategoryRepository::class)]
-    // #[ORM\JoinColumn(nullable: false)]
-    // private ?CategoryRepository $category;
+    #[ORM\ManyToOne(targetEntity: Category::class)]
+    private ?Category $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;

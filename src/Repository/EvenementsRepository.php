@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Evenements;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Component\BrowserKit\Response;
 
 /**
  * @extends ServiceEntityRepository<Evenements>
@@ -18,8 +17,7 @@ class EvenementsRepository extends ServiceEntityRepository
     }
 
 
-        #[Route('/category', name: 'app_evenements_find_by_category', methods: ['GET'])]
-    public function findByCategoryName(Evenements $categoryName): array
+    public function findByCategoryName(string $categoryName): array
     {
         return $this->createQueryBuilder('e')
             ->join('e.category', 'c')

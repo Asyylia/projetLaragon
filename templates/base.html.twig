@@ -12,11 +12,11 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %} #}
     </head>
-    <body>
+    <body style="background-image: url('{{ asset('images/background.png') }}')">
     <header>
             <div id="idheader"><a href="{{ path('app_home_page') }}"><img src="{{ asset('images/Logo.png') }}" class="logo"  style="cursor: pointer;"></a>
             <div class="divnav">
-                <div class="nav"><a class="navbar-titre" href="{{ path('register') }}">Inscription</a><a class="navbar-titre"
+                <div class="nav"><a class="navbar-titre" href="{{ path('app_register') }}">Inscription</a><a class="navbar-titre"
                         href="{{ path('login') }}">Connexion</a><img src="{{ asset('images/loupe-search-svgrepo-com-ih738VQ.png') }}"
                         class="emoticone-header"><img src="{{ asset('images/shopping-basket-supermarket-svgrepo-com.png') }}"
                         class="emoticone-header"></div><a class="annonce" href="#">Déposer votre annonce</a>

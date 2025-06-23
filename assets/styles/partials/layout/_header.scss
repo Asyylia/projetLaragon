@@ -1,55 +1,75 @@
-#idheader {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 100px;
-  .divnav {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    .annonce {
-      display: flex;
-      justify-content: right;
-      padding: 5px;
-      text-decoration: none;
+@media screen and (min-width: 1401px) {
+    #idheader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 100px;
+        .divnav {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            .annonce {
+                display: flex;
+                justify-content: right;
+                padding: 5px;
+                text-decoration: none;
+            }
+            .nav {
+                display: flex;
+                gap: 30px;
+                .navbar-titre {
+                    font-family: "League Spartan";
+                    font-size: 30px;
+                    text-decoration: none;
+                }
+                .emoticone-header {
+                    width: 47px;
+                    height: 47px;
+                }
+            }
+        }
     }
-    .nav {
-      display: flex;
-      gap: 30px;
-      .navbar-titre {
-        font-family: "League Spartan";
-        font-size: 30px;
-        text-decoration: none;
-      }
-      .emoticone-header {
-        width: 47px;
-        height: 47px;
-      }
-    }
-  }
 }
 
-@media screen and (max-width: 1000px) {
-  #idheader {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 100px;
-    .divnav {
-      .annonce {
-        display: none;
-        justify-content: right;
-        padding: 5px;
-        text-decoration: none;
-      }
-      .logo {
-        width: 250px;
-      }
-      .nav {
-        display: none;
-      }
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    #idheader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 100px;
+        .divnav {
+            .annonce {
+                display: none;
+                justify-content: right;
+                padding: 5px;
+                text-decoration: none;
+            }
+            .nav {
+                display: none;
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width: 800px) {
+    #idheader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 100px;
+        .divnav {
+            .annonce {
+                display: none;
+                justify-content: right;
+                padding: 5px;
+                text-decoration: none;
+            }
+            .nav {
+                display: none;
+            }
+        }
+    }
 }

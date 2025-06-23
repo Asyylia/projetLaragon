@@ -1,10 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Connexion{% endblock %}
-
 {% block body %}
-
-<html lang="fr">
+ <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -15,11 +12,11 @@
 
 <body>
     {# <header>
-        <div id="idheader"><img src="images/logo.png" class="logo" href="#" style="cursor: pointer;">
+        <div id="idheader"><img src="{{ asset('images/Logo.png') }}" class="logo" href="#" style="cursor: pointer;">
             <div class="divnav">
                 <div class="nav"><a class="navbar-titre" href="#">Inscription</a><a class="navbar-titre"
-                        href="#">Connexion</a><img src="./images/loupe-search-svgrepo-com.png"
-                        class="emoticone-header"><img src="images/shopping-basket-supermarket-svgrepo-com.png"
+                        href="#">Connexion</a><img src="{{ asset('images/loupe-search-svgrepo-com-ih738VQ.png') }}"
+                        class="emoticone-header"><img src="{{ asset('images/shopping-basket-supermarket-svgrepo-com.png') }}"
                         class="emoticone-header"></div><a class="annonce" href="#">Déposer votre annonce</a>
             </div>
         </div>
@@ -27,17 +24,17 @@
     </header> #}
     <main>
         <section id="pageco">
-            <div class="divco">
-                <h1>Connexion</h1>
-                <form class="form"><input id="inputEmail" placeholder="Adresse e-mail" value=""><input id="inputMdp"
-                        placeholder="Mot de passe" type="password" value="">
-                    <div class="divcheck"><input class="check" type="checkbox" name="checked">
-                        <p class="remember">Se souvenir de moi</p>
-                    </div><button class="btnco" id="btnco">
-                        <p class="seco">Se connecter</p>
-                    </button>
-                </form>
-            </div>
+            {# <div class="cookie-container">
+                <img src="../../public/images/cookie-svgrepo-com.png" class="logo-cookie">
+                <div class="text">
+                    <h2 class="cookie-title">Politique de confidentialité</h2>
+                    <p class="cookie-subtitle">La présente politique de confidentialité a pour but d’informer les
+                        utilisateurs du site</p>
+                    <button class="button-cookie">J'ai compris.</button>
+                </div>
+            </div> #}
+           <div> <h1>Mon compte</h1></div>
+
         </section>
 
     </main>
@@ -49,19 +46,16 @@
                 contacter</a>
             <p class="mentions">Informations légales</p>
         </div>
-        <div class="sociaux"><img src="images/facebook-svgrepo-com 2.png" class="logosociaux"><img
-                src="images/instagram-svgrepo-com 1.png" class="logosociaux"><img
-                src="images/twitter-svgrepo-com (1) 1.png" class="logosociaux"></div>
+        <div class="sociaux"><img src="{{ asset('images/facebook-svgrepo-com 2.png') }}" class="logosociaux"><img src="{{ asset('images/instagram-svgrepo-com 1.png') }}" class="logosociaux">
+        <img src="{{ asset('images/twitter-svgrepo-com (1) 1.png') }}" class="logosociaux"></div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="./cookie.js"></script>
-    <script src="./main.js"></script> --> #}
-
+    <script src="./cookie.js"></script>
+    <!-- <script src="./main.js"></script> --> #}
 
 </body>
 
 </html>
-
 {% endblock %}

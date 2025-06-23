@@ -27,9 +27,18 @@
                             <option class="licat" value="option3">Ce mois-ci</option>
                             <option class="licat" value="option4">À venir</option>
                             <option disabled="" value="">Date</option>
-                        </select><button class="btnsearch">Rechercher</button></div>
+                        </select><button class="btnsearch"><a class="textsearch" href="{{ path('app_evenements_index') }}">Rechercher</a></button></div>
                 </div></div>
-    <h1>Évènements</h1>
+
+
+        <div class="outils">    
+            
+            <button class="map">
+                <p>Carte</p>
+                <img class ="logomap" src="{{ asset('images/carte.png') }}">
+            </button>
+        </div>
+
 
         <div class="events">
 
@@ -39,24 +48,20 @@
 {{ evenement.time ? evenement.time|date('d-m-Y') : '' }}
                 </h2>
                 
-                    <div class="carte">  
-                    <div class="img-titre-event">
-                    <img class="eventimg"src="{{ evenement.img }}">                      
-                    <a class="lien-page-event" href="{{ path('app_evenements_show', {'id': evenement.id}) }}">
-                        {# <td>{{ evenement.id }}</td> #}
-                        <h3>{{ evenement.name }}</h3>
+                    <div class="carte" style="background-color:{{ evenement.category.color }}">  
+                        <div class="img-titre-event">
+                            <img class="eventimg"src="{{ evenement.img }}">                      
+                                <a class="lien-page-event" href="{{ path('app_evenements_show', {'id': evenement.id}) }}">
+                                    <h3>{{ evenement.name }}</h3>
                         </div>
-                    {# <td>{{ evenement.category }}</td> #}
-                    <div class="description">{{ evenement.description }}</div>
-                    {{ evenement.price }}<span> €</span>
-                    
-                    
-
-                        </a>
+                                <div class="description">{{ evenement.description }}
+                                </div>
+                                <div class="prix">{{ evenement.price }}<span> €</span>
+                                </div>
+                                </a>
                     {# <a href="{{ path('app_evenements_edit', {'id': evenement.id}) }}">edit</a> #}
-                    </div>
-        
-            </div>
+                     </div>
+             </div>
 
        
         {% else %}
